@@ -1,0 +1,159 @@
+/* =========================
+   Base / Layout
+========================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: #f4f7f6;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container { max-width: 1200px; margin: 0 auto; }
+
+/* =========================
+   Header (AWS Theme)
+========================= */
+.header {
+  text-align: center;
+  background: #232f3e; /* AWS Dark Blue */
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  color: #ff9900; /* AWS Orange */
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* =========================
+   Service Cards Grid
+========================= */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.event-card {
+  background: #fff;
+  border-radius: 10px;
+  border-top: 5px solid #ff9900; /* Orange Accent */
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.event-content { padding: 25px; }
+
+.event-title {
+  font-size: 1.5rem;
+  color: #232f3e;
+  margin-bottom: 12px;
+}
+
+.event-description {
+  color: #545b64;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.event-detail {
+  font-weight: bold;
+  color: #ff9900;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* =========================
+   Modal & Booking Form
+========================= */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #fff;
+  max-width: 600px;
+  margin: 50px auto;
+  border-radius: 15px;
+  padding: 30px;
+  position: relative;
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.rsvp-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #232f3e;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d5dbdb;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background: #ff9900;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #ec7211; /* Darker Orange */
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

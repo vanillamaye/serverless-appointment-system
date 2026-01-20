@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Appointment System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📅</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Our Professional Services</h1>
+            <p>Select a service below to book your appointment</p>
+        </div>
+
+        <div class="events-grid" id="servicesGrid">
+            <div class="loading">Loading available services...</div>
+        </div>
+    </div>
+
+    <div class="modal" id="appointmentModal">
+        <button class="close-btn" onclick="closeModal()">×</button>
+        <div class="modal-content" id="modalContent">
+            </div>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="services.js"></script> 
+    <script src="app.js"></script>
+</body>
+</html>
