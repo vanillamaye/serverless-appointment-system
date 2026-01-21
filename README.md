@@ -9,8 +9,10 @@ This project leverages a **Serverless Architecture** to ensure high availability
 * **API Management:** Utilizes **Amazon API Gateway** to manage RESTful endpoints and secure communication between the frontend and backend.
 * **Compute:** **AWS Lambda** (Node.js) serves as the backend engine, handling business logic and database transactions.
 * **Databases (Polyglot Persistence):**
-    * **Amazon RDS (MySQL):** Stores relational data for the Service Catalog (Service IDs, Titles, Descriptions, and Durations).
-    * **Amazon DynamoDB:** A NoSQL database used for high-speed storage of client transactional records and appointment logs.
+
+   * **Amazon RDS (MySQL):** Stores relational data for the Service Catalog (Service IDs, Titles, Descriptions, and Durations).
+   
+    * **Amazon DynamoDB:** A NoSQL database used for high-speed storage of client transactional records and appointment logs.
 * **Monitoring & Logging:** Integrated with **Amazon CloudWatch** for real-time error tracking and execution logs.
 
 ## 📸 Proof of Work
@@ -33,4 +35,5 @@ The browser's Network tab confirms a **Status 201 (Created)**, verifying that th
 * **CDN Implementation:** Configured CloudFront distributions to provide secure (SSL) and fast global content delivery.
 * **Serverless Backend:** Implemented AWS Lambda functions with proper layers and environment variables for database connectivity.
 * **Database Management:** Successfully managed a hybrid database environment using both Relational (SQL) and Non-Relational (NoSQL) solutions.
+
 
